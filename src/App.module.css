@@ -1,0 +1,45 @@
+body {
+  background: linear-gradient(to bottom right, lightcoral 50%, lightblue 50%);
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card:focus {
+  transform: scale(1.2);
+  z-index: 1;
+}
+
+.card:not(:focus) {
+  transform: rotate(-10deg);
+}
+
+.card:not(:focus) + .card {
+  margin-left: -50px;
+}
+
+.card:not(:focus) ~ .card {
+  transform: rotate(10deg);
+}
